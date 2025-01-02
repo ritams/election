@@ -1,5 +1,5 @@
 // Path to the folder containing images
-const imgFolder = "/assets/";
+const imgFolder = "assets/";
 
 // Get references to elements
 const countrySelector = document.getElementById("country-selector");
