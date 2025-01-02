@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elections - Santhanam Lab</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/election.png">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="desktop">
+            <ul>
+                <li class=""><a href="/index.html">Home</a></li>
+                <li class=""><a href="/team.html">Team</a></li>
+                <li class=""><a href="/publications.html">Publications</a></li>
+                <li class="active"><a href="learnmore.html"> Learn more</a></li>
+            </ul>
+            <div class="call-to-action">
+                <a href="/insights.html">Insights</a>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <div class="call-to-action" id="insight">
+                <a href="/insights.html">Insights</a>
+            </div>
+            <ul id="hidden">
+                <li class="active"><a href="/index.html">Home</a></li>
+                <li class=""><a href="/team.html">Team</a></li>
+                <li class=""><a href="/publications.html">Publications</a></li>
+                <li class=""><a href="/learnmore.html"> Learn more</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <img src="/assets/diagram.svg" alt="">
+
+
+        <div class="vspace-5rem"></div>
+
+
+        <div class="align">
+
+            <section class="article">
+                <h1>
+                    Basic template of an election and random voting model
+                </h1>
+                <div class="vspace-1rem"></div>  
+                <p>
+                    An election happens at all the \(N\) electoral units following the first-post-the-past principle. Let the i-th electoral 
+                    unit have \(n^e_i\) candidates and \(n^v_i\) eligible voters, where \(i = 1, 2, \cdots, N\).
+                </p>
+
+                <div class="vspace-1rem"></div>
+
+                <p>
+                    Usually, only a fraction of the eligible voters cast their votes. This is termed the turnout
+                    \(T_i \le N\)
+                </p>
+
+                <div class="vspace-1rem"></div>
+
+                <p>
+                    The candidate securing the highest number of votes, \(V_{w}\), is declared the winner, while the candidate with the second-highest votes, \(V_{r}\), is the runner-up.
+                </p>
+
+                <div class="vspace-1rem"></div>
+
+                <p>
+                    The vote difference between the winner and the runner is the marin of victory \((M = V_w - V_r)\).
+                </p>
+
+                <div class="vspace-1rem"></div>
+
+                <p>
+                    Specific margin, \(\mu = M / T \), is a turnout independent measure of electoral competition.
+                </p>
+
+                <div class="vspace-1rem"></div>
+
+                <p>
+                    In the random voting model (RVM), electors cast their vote to j-th candidate, randomly with 
+                    probablity \(p_j\). \(p_j\) is constructed by normalizeing random uniform weights \(w_j\).
+                </p>
+            </section>
+
+
+        </div>
+        <div class="vspace-5rem"></div>        
+    
+       
+    </main>
+    <footer>
+        <a href="http://iiserpune.ac.in/">IISER Pune</a>
+        <a href="http://sites.iiserpune.ac.in/~santh/">M. S. Santhanam</a>
+        <a href="mailto:santh@iiserpune.ac.in">santh@iiserpune.ac.in</a>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elections - Santhanam Lab</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/election.png">
+
+</head>
+<body>
+    <header>
+        <nav class="desktop">
+            <ul>
+                <li class=""><a href="/index.html">Home</a></li>
+                <li class=""><a href="/team.html">Team</a></li>
+                <li class=""><a href="/publications.html">Publications</a></li>
+                <li class=""><a href="learnmore.html"> Learn more</a></li>
+            </ul>
+            <div class="call-to-action active">
+                <a href="/insights.html">Insights</a>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <div class="call-to-action" id="insight">
+                <a href="/insights.html">Insights</a>
+            </div>
+            <ul id="hidden">
+                <li class="active"><a href="/index.html">Home</a></li>
+                <li class=""><a href="/team.html">Team</a></li>
+                <li class=""><a href="/publications.html">Publications</a></li>
+                <li class=""><a href="/learnmore.html"> Learn more</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <img src="/assets/homepage-banner.svg" alt="">
+
+
+        <div class="vspace-5rem"></div>
+
+        <div class="align">
+
+        <div class="two-column card" id="margin">
+        <section class="result-text">
+            <h1>
+                Can turnout predict margin?
+            </h1>
+            <p>
+                In any election, an informative indicator of the degree of competition and the extent of consensus is the victory margin.
+                A vanishing margin signifies tight competition and a divided electorate, whereas large margins indicate a decisive mandate 
+                and overwhelming consensus in favor of one candidate.
+                
+            </p>
+            <div class="vspace-1rem"></div>
+            <p>Now one the natural questions that arises: Can we predict margins?
+                It turns out the answer is Yes (well, sort of)! Using the random voting model, RVM in short, 
+                we can predict the distribution of margins (appropriately scaled), when the turnout data of any election is provided.
+            </p>
+        </section>
+        <section class="result-fig">
+            <h2>Scaled Margin Distribution</h2>
+            <div class="dropdown-wrapper">
+            <label for="country-selector">Select a Country</label>
+                <select name="" id="country-selector">
+                    <option value="Australia">Australia</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="kenya">kenya</option>
+                    <option value="Korea">South Korea</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Mayanmar">Mayanmar</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="UK">Unite Kingdom</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United States">United States of America</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+            </div>
+
+            <div class="vspace-2rem"></div>
+            <img src="/assets/India-margin.jpg" alt="" class="result" id="margin-image">
+        </section>
+        </div>
+
+        <div class="vspace-5rem"></div>
+
+        <div class="two-column card" id="universality">
+            <section class="result-text">
+                <h1>
+                    What is universality?
+                </h1>
+                <p>
+                    Imagine uncovering patterns so robust they hold true across the globe, 
+                    regardless of country, culture, or rules. This is the essence of universality — simple, 
+                    universal trend hidden within the chaos of complex systems like elections. 
+                </p>
+                <div class="vspace-1rem"></div>
+                <p>
+                    While margin of victory is an indicator of electoral competition, the margin-to-turnout ratio, 
+                    later called as the specific margin, captures the competitiveness of an election irrespective of
+                    the size of the electorate. The distribution of specific margin, when scaled by it's mean, display
+                    a universal trend, regardless of electorate size (from municipal elections to state-level and Parliamentary elections), 
+                    country, region, or the finer details of how the elections are conducted.
+
+                </p>
+            </section>
+            <section class="result-fig">
+                <h2>Universal distribution of scaled specific margins</h2>
+                <div class="vspace-2rem"></div>
+                <img src="/assets/universality-website.jpg" alt="" class="result" id="margin-image">
+            </section>
+           </div>
+           <div class="vspace-5rem"></div>
+        <div class="two-column card" id="malpractice">
+            <section class="result-text">
+                <h1>
+                    How to detect electoral malpractice?
+                </h1>
+                <p>
+                    Voter turnouts drive the margin of victory and the scaled specific margin distributions follow
+                    a robust universal trend. Now by analyzing election data, any significant deviation from this expected pattern 
+                    can serve as a red flag, indicating potential fraud or manipulation. For instance, elections in Ethiopia and Belarus 
+                    exhibited clear deviations from the universal norm, aligning with reports from international media and civil organizations about potential electoral malpractices
+                </p>
+            </section>
+            <section class="result-fig">
+                <h2>Flagged Elections: Ethiopia and Belarus</h2>
+                <div class="vspace-2rem"></div>
+                <img src="/assets/malpractice-website.jpg" alt="" class="result" id="margin-image">
+            </section>
+           </div>
+           <div class="vspace-5rem"></div>
+
+           <div class="two-column card" id="vote">
+            <section class="result-text">
+                <h1>
+                    Can we predict vote distributions?
+                </h1>
+                <p>
+                    The random voting model can accurately predict the scaled margin distribution from turnout data alone, as well as
+                    the universal trend. This leads to a natural question: Does the voter turnouts encode information about 
+                    other key electoral statistics? And can we leverage RVM to predict those statistics? 
+                </p>
+                <div class="vspace-1rem"></div>
+                <p>
+                    Using election data of India spanning several decades and electoral scales, we discover that the scaled distributions of votes received by the winner and the runner-up can indeed be predicted with remarkable accuracy using RVM and voter turnouts.
+
+                </p>
+            </section>
+            <section class="result-fig">
+                <h2>Scaled Vote distribution</h2>
+                <div class="dropdown-wrapper">
+                <label for="country-selector">Select from Indian Elections</label>
+                    <select name="" id="indian-election-selector">
+                        <option value="GEPBwinner">Winner: General Elections (PB)</option>
+                        <option value="GEACwinner">Winner: General Elections (AC)</option>
+                        <option value="GEPCwinner">Winner: General Elections (PC)</option>
+                        <option value="AEACwinner">Winner: Assembly Elections (AC)</option>
+                        <option value="GEPBrunnerup">Runner-up: General Elections (PB)</option>
+                        <option value="GEACrunnerup">Runner-up: General Elections (AC)</option>
+                        <option value="GEPCrunnerup">Runner-up: General Elections (PC)</option>
+                        <option value="AEACrunnerup">Runner-up: Assembly Elections (AC)</option>
+                    </select>
+                </div>
+    
+                <div class="vspace-2rem"></div>
+                <img src="/assets/AEACwinner.jpg" alt="" class="result" id="vote-image">
+            </section>
+            </div>
+            <div class="vspace-5rem"></div>
+       </div>
+
+
+    </main>
+    <footer>
+        <a href="http://iiserpune.ac.in/">IISER Pune</a>
+        <a href="http://sites.iiserpune.ac.in/~santh/">M. S. Santhanam</a>
+        <a href="mailto:santh@iiserpune.ac.in">santh@iiserpune.ac.in</a>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
